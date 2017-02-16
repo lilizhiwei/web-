@@ -78,7 +78,7 @@ body{font: 14px/24px "微软雅黑";}
 	list-style: none;
 	float: left;
 	line-height: 33px;
-	padding: 0 28px;
+	padding: 0 18px;
 }
 .nav li.a , .nav li:hover{
 	background: url("../images/shen.jpg") repeat-x;
@@ -87,4 +87,43 @@ body{font: 14px/24px "微软雅黑";}
 	color: #fff;
 	font-size: 16px;
 	text-decoration: none;
+}
+/*center*/
+.ad{
+	margin-bottom: 10px;
+}
+.tit{
+	padding-bottom: 6px;
+	border-bottom: 1px solid darkred;
+	position: relative;
+	margin-bottom: 10px;
+}
+.tit span{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.tit a{
+	color: darkred;
+	text-decoration: none;
+}
+.jianjie{
+	width: 540px;
+	height: 360px;
+	margin-right: 20px;
+}
+.jj_c img{
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.jj_c p{
+	color: rgb(140,140,140);
+}
+.xinwen{
+	width: 400px;
+	height: 300px;
+}
+.chanpin{
+	width: 100%;
+	height: 300px;
 }
