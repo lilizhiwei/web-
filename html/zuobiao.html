@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自信息量函数曲线绘制</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #main ,#output{
+            width: 800px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        #output{
+        	font-family: "courier new";
+        	font-size: 30px;
+            padding: 100px 0 0 400px;
+        	}
+       canvas{
+        	margin: 0 auto;
+        	}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>自信息量函数曲线绘制</h1>
+        <p>本实验在网页上绘制自信息量函数曲线的图像</p>
+        <p>
+                实验内容：
+        </p>
+        <ul>
+            
+            <li>任意随机事件的自信息量定义为该事件发生概率的对数的负值。</li>
+            <li>自信息量函数的公式：I(x<sub>i</sub>)=-log p(x<sub>i</sub>)&nbsp;&nbsp;&nbsp;&nbsp;(x<sub>i</sub>=i*(1/n)&nbsp;&nbsp;n是密度)</li>
+            <li>同学们可以自己用 Excel 和 Matlab 软件绘制</li>
+            
+        </ul>
+        <hr />
+       
+            请输入密度：
+        <input type="text" id="input" title="lvl" placeholder="10"/>
+        <input type="button" value="确定" onclick="I()" />
+        <input type="button" value="返回首页" onclick="window.location.href='首页.html'" />
+        
+    </div>
+    <div id="container">
+            <canvas id="cavsElem">
+                您的浏览器不支持，请升级浏览器
+            </canvas>
+        </div>
+        <script>
+        (function(){
+            var canvas = document.getElementById('cavsElem');
+            var ctx = canvas.getContext("2d");
+
+            canvas.width = 600;
+            canvas.height = 600;
+            canvas.style.border = '1px solid #000';
+
+            // ctx.beginPath();
+            // ctx.moveTo(0, 0);
+
+            // ctx.closePath();
+            // ctx.stroke();
+            //绘制x轴 
+            var x0 = 100;
+            var y0 = 400;
+            var maxHeight  = 300;
+            var arrowWidth = 10;
+            ctx.beginPath();
+            ctx.strokeStyle = 'blue';
+            ctx.moveTo(x0,y0);
+            ctx.lineTo(500, 400);
+            //往上面画箭头
+            ctx.lineTo(500 - arrowWidth,400-arrowWidth);
+            ctx.moveTo(500,400);
+            ctx.lineTo(500 - arrowWidth,400+arrowWidth); 
+            ctx.stroke();
+
+            //绘制y轴
+            ctx.beginPath();
+            ctx.strokeStyle = 'orange';
+            ctx.moveTo(x0,y0);
+            ctx.lineTo(100, 0);
+            ctx.lineTo(100-arrowWidth, arrowWidth);
+            ctx.moveTo(100, 0);
+            ctx.lineTo(100+arrowWidth,arrowWidth);
+            ctx.stroke();
+
+            //绘制线段
+            var data = [.4,.5,.8,.1,.9,.2,.5,.4,.5];
+            var pointWidth = 400 / (data.length+1);
+            ctx.beginPath();
+            ctx.strokeStyle = 'blue';
+            for(var i = 0;i<data.length;i++){
+                var x = x0 + (i+1)*pointWidth;
+                var y = y0 - data[i]*maxHeight;
+                ctx.lineTo(x, y);
+
+                ctx.stroke();
+            }
+
+        }());
+        </script>
+</body>
+</html>

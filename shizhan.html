@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>小测试</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="./图片/jquery.js"></script>
+    <script>
+	    $(function(){
+            var ans =['一石二鸟','单枪匹马','日上三竿','粗茶淡饭','相濡以沫','抛砖引玉','跳梁小丑','旁门左道','柳暗花明','狼狈为奸'];
+            var i = 0;
+            if($('#1').value==ans[1]){
+                i=i+10;
+            }
+            if($('#2').value==ans[1]){
+                i=i+10;
+            }
+            if($('#3').value==ans[2]){
+                i=i+10;
+            }
+            if($('#4').value==ans[3]){
+                i=i+10;
+            }
+            if($('#5').value==ans[4]){
+                i=i+10;
+            }
+            if($('#6').value==ans[5]){
+                i=i+10;
+            }
+            if($('#7').value==ans[6]){
+                i=i+10;
+            }
+            if($('#8').value==ans[7]){
+                i=i+10;
+            }
+            if($('#9').value==ans[8]){
+                i=i+10;
+            }
+            if($('#10').value==ans[9]){
+                i=i+10;
+            }
+	        $('#111').click(function() {
+                if (i <= 0) {
+                    alert("你的分数是 :"+i+",你应该好好多学点了！");
+                }
+                if (i >= 10 && i <= 40) {
+                    alert("你的分数是 :"+i+",你还是有些知识欠缺的！");
+                }
+                if (i >= 50 && i <= 80) {
+                    alert("你的分数是 :"+i+",很好了，再接再厉");
+                }
+                if (i >= 90 && i <= 100) {
+                    alert("你的分数是 :"+i+",哇，你可真是厉害，高手，高手！！");
+                }
+            });
+	    })
+    </script>
+</head>
+
+<body>
+    <h2>看图猜成语</h2>
+    <FORM autocomplete="off">       
+        <p style="line-height: 150%" align="left" class="question">
+            1.<br>
+            <img src="./图片/1.png"/><br>
+            <input id="1" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            2.<br>
+            <img src="./图片/2.png"/><br>
+            <input id="2" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            3.<br>
+            <img src="./图片/3.png"/><br>
+            <input id="3" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            4.<br>
+            <img src="./图片/4.png"/><br>
+            <input id="4" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            5.<br>
+            <img src="./图片/5.png"/><br>
+            <input id="5" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            6.<br>
+            <img src="./图片/6.png"/><br>
+            <input id="6" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            7.<br>
+            <img src="./图片/7.png"/><br>
+            <input id="7" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            8.<br>
+            <img src="./图片/8.png"/><br>
+            <input id="8" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            9.<br>
+            <img src="./图片/9.png"/><br>
+            <input id="9" value="">
+        <p style="line-height: 150%" align="left" class="question">
+            10.<br>
+            <img src="./图片/10.png"/><br>
+            <input id="10" value="">
+        <p style="line-height: 150%">
+         	<input id="111" type=button onClick="Score()" value="查看成绩" class="btn">
+        </p>
+    </FORM>
+</div>
+</body>
+
+</html>
+
